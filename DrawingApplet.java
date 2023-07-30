@@ -154,14 +154,14 @@ public class DrawingApplet extends Applet implements ActionListener, MouseListen
         ((Graphics2D) g).setStroke(new BasicStroke(lineWidth));
         g.drawLine(startX, startY, endX, endY);
     }
-
+ private void fillShape() {
+ 
+ }
+    
 
 
 	
-/*
-ياسمين
 
-*/
 
 private void eraseObject(int x, int y) {
         Graphics g = getGraphics();
