@@ -67,7 +67,8 @@ public class DrawingApplet extends Applet implements ActionListener, MouseListen
         addMouseMotionListener(this);
  }
 /*____________________________________________*/
-	 public void actionPerformed(ActionEvent e) {
+	 public void actionPerformed(ActionEvent e) 
+	{
          if (e.getSource() == rectButton) {
             currentShape = "rectangle";
          } 
@@ -90,7 +91,32 @@ public class DrawingApplet extends Applet implements ActionListener, MouseListen
         }
          else if (e.getSource() == greenButton) {
             currentColor = Color.GREEN;
-        }	 
+        }	
+
+         else if (e.getSource() == fillButton) {
+            fillShape();
+        }
+        
+        else if (e.getSource() == eraseButton) {
+            isErasing = true;
+	    isDrawing = false;
+	    currentColor = Color.WHITE;
+	    currentShape = "line";
+        }
+
+        else if (e.getSource() == increaseButton) {
+            lineWidth++;
+	}
+
+        else if (e.getSource() == decreaseButton) {
+            if (lineWidth > 1) {
+                lineWidth--;
+            }
+        }
+	    else if (e.getSource() == clearButton) {
+            clearCanvas();
+        }
+		 
 	 }
 	
 
