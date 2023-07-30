@@ -44,7 +44,27 @@ public class DrawingApplet extends Applet implements ActionListener, MouseListen
         eraseButton.addActionListener(this);
         increaseButton.addActionListener(this);
         decreaseButton.addActionListener(this);
-	       clearButton.addActionListener(this);
+       clearButton.addActionListener(this);
+
+  	// the panel 
+  	 topPanel = new Panel();
+        topPanel.setLayout(new FlowLayout());
+        topPanel.add(rectButton);
+        topPanel.add(circleButton);
+        topPanel.add(ovalButton);
+        topPanel.add(lineButton);
+        topPanel.add(yellowButton);
+        topPanel.add(blueButton);
+        topPanel.add(greenButton);
+        topPanel.add(fillButton);
+        topPanel.add(eraseButton);
+        topPanel.add(increaseButton);
+        topPanel.add(decreaseButton);
+	topPanel.add(clearButton);
+
+        add(topPanel, BorderLayout.NORTH);
+        addMouseListener(this);
+        addMouseMotionListener(this);
 
 
  }
