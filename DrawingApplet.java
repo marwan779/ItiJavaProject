@@ -91,19 +91,7 @@ public class DrawingApplet extends Applet implements ActionListener, MouseListen
         }
     }
 	
-	public void mouseReleased(MouseEvent e) {
-        endX = e.getX();
-        endY = e.getY();
-        if (currentShape.equals("rectangle")) {
-            drawRectangle();
-        } else if (currentShape.equals("circle")) {
-            drawCircle();
-        } else if (currentShape.equals("oval")) {
-            drawOval();
-        }
-        isDrawing = false;
-        isErasing = false;
-    }
+	
 	public void mouseDragged(MouseEvent e) {
         if (isDrawing) {
             endX = e.getX();
