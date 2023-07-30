@@ -163,9 +163,9 @@ public class DrawingApplet extends Applet implements ActionListener, MouseListen
 
 */
 
-
-	
-/*
-عمر
-*/
+private void eraseObject(int x, int y) {
+        Graphics g = getGraphics();
+        g.setColor(getBackground());
+        g.drawLine(x - 5, y - 5, 10, 10);
+    }
 }
