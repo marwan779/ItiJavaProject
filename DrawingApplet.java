@@ -84,7 +84,7 @@ public class DrawingApplet extends Applet implements ActionListener, MouseListen
  
  */
 	
-    private void drawRectangle() {
+ private void drawRectangle() {
         int x = Math.min(startX, endX);
         int y = Math.min(startY, endY);
         int width = Math.abs(startX - endX);
@@ -92,6 +92,16 @@ public class DrawingApplet extends Applet implements ActionListener, MouseListen
         Graphics g = getGraphics();
         g.setColor(currentColor);
         g.drawRect(x, y, width, height);
+    }
+ private void drawCircle() {
+        int x = Math.min(startX, endX);
+        int y = Math.min(startY, endY);
+        int width = Math.abs(startX - endX);
+        int height = Math.abs(startY - endY);
+        int diameter = Math.min(width, height);
+        Graphics g = getGraphics();
+        g.setColor(currentColor);
+        g.drawOval(x, y, diameter, diameter);
     }
 
 
