@@ -164,6 +164,14 @@ public class DrawingApplet extends Applet implements ActionListener, MouseListen
             int height = Math.abs(startY - endY);
             g.fillRect(x, y, width, height);
 	}
+	else if (currentShape.equals("circle")) {
+            int x = Math.min(startX, endX);
+            int y = Math.min(startY, endY);
+            int width = Math.abs(startX - endX);
+            int height = Math.abs(startY - endY);
+            int diameter = Math.min(width, height);
+            g.fillOval(x, y, diameter, diameter);
+        } 
  
  }
     
