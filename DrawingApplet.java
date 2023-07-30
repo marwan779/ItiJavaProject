@@ -16,6 +16,7 @@ public class DrawingApplet extends Applet implements ActionListener, MouseListen
     private boolean isErasing = false;   
     public void init() 
  {       setSize(CANVAS_WIDTH, CANVAS_HEIGHT);
+           //the buttons
         rectButton = new Button("Rectangle");
         circleButton = new Button("Circle");
         ovalButton = new Button("Oval");
@@ -30,7 +31,20 @@ public class DrawingApplet extends Applet implements ActionListener, MouseListen
         eraseButton = new Button("Eraser");
         increaseButton = new Button("Increase Thickness"); // the increase and decrease buttons can cotrol the Thickness of the lines and the eraser also 
         decreaseButton = new Button("Decrease Thickness");  
-        clearButton = new Button("Clear");
+        clearButton = new Button("Clear"); // this button erases everthing and restore the white background
+            // the action listeners
+        rectButton.addActionListener(this);
+        circleButton.addActionListener(this);
+        ovalButton.addActionListener(this);
+        lineButton.addActionListener(this);
+        yellowButton.addActionListener(this);
+        blueButton.addActionListener(this);
+        greenButton.addActionListener(this);
+        fillButton.addActionListener(this);
+        eraseButton.addActionListener(this);
+        increaseButton.addActionListener(this);
+        decreaseButton.addActionListener(this);
+	       clearButton.addActionListener(this);
 
 
  }
