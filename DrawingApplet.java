@@ -112,7 +112,12 @@ public class DrawingApplet extends Applet implements ActionListener, MouseListen
         g.setColor(currentColor);
         g.drawOval(x, y, width, height);
     }
-
+    private void drawLine() {
+        Graphics g = getGraphics();
+        g.setColor(currentColor);
+        ((Graphics2D) g).setStroke(new BasicStroke(lineWidth));
+        g.drawLine(startX, startY, endX, endY);
+    }
 
 
 
