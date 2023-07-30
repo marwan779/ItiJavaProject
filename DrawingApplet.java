@@ -65,8 +65,42 @@ public class DrawingApplet extends Applet implements ActionListener, MouseListen
         add(topPanel, BorderLayout.NORTH);
         addMouseListener(this);
         addMouseMotionListener(this);
-
-
  }
+/*ٌ
 
+
+
+رويدا
+
+
+
+*/
+
+
+	
+/*
+
+ أميرة
+ 
+ */
+
+
+	
+/*
+يحيى
+
+*/
+
+
+	
+/*
+ياسمين
+
+*/
+
+
+	
+/*
+عمر
+*/
 }
