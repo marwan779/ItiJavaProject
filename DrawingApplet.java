@@ -66,15 +66,24 @@ public class DrawingApplet extends Applet implements ActionListener, MouseListen
         addMouseListener(this);
         addMouseMotionListener(this);
  }
-/*ٌ
-
-
-
-رويدا
-
-
-
-*/
+/*____________________________________________*/
+	 public void actionPerformed(ActionEvent e) {
+         if (e.getSource() == rectButton) {
+            currentShape = "rectangle";
+         } 
+	 else if (e.getSource() == circleButton) {
+            currentShape = "circle";
+       }
+	 else if (e.getSource() == ovalButton) {
+            currentShape = "oval";
+	
+       } 
+	 else if (e.getSource() == lineButton) {
+            currentShape = "line";				
+        }
+		 
+	 }
+	
 
 
 
