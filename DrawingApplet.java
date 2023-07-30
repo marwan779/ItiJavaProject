@@ -168,4 +168,10 @@ private void eraseObject(int x, int y) {
         g.setColor(getBackground());
         g.drawLine(x - 5, y - 5, 10, 10);
     }
+private void clearCanvas() {
+Graphics g = getGraphics();
+g.setColor(Color.WHITE);
+g.fillRect(0, 0, 10000, 10000);
+g.setColor(currentColor);
+}
 }
