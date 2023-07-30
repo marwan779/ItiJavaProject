@@ -82,6 +82,15 @@ public class DrawingApplet extends Applet implements ActionListener, MouseListen
             currentShape = "line";				
         }
 		 
+	  else if (e.getSource() == yellowButton) {
+            currentColor = Color.YELLOW;
+          } 
+          else if (e.getSource() == blueButton) {
+            currentColor = Color.BLUE; 
+        }
+         else if (e.getSource() == greenButton) {
+            currentColor = Color.GREEN;
+        }	 
 	 }
 	
 
