@@ -83,13 +83,18 @@ public class DrawingApplet extends Applet implements ActionListener, MouseListen
  أميرة
  
  */
-
-
 	
-/*
-يحيى
+    private void drawRectangle() {
+        int x = Math.min(startX, endX);
+        int y = Math.min(startY, endY);
+        int width = Math.abs(startX - endX);
+        int height = Math.abs(startY - endY);
+        Graphics g = getGraphics();
+        g.setColor(currentColor);
+        g.drawRect(x, y, width, height);
+    }
 
-*/
+
 
 
 	
