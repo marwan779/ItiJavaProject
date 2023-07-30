@@ -83,6 +83,13 @@ public class DrawingApplet extends Applet implements ActionListener, MouseListen
  أميرة
  
  */
+	public void mousePressed(MouseEvent e) {
+        startX = e.getX();
+        startY = e.getY();
+        if (currentShape.equals("line")) {
+            isDrawing = true;
+        }
+    }
 	
 	public void mouseReleased(MouseEvent e) {
         endX = e.getX();
