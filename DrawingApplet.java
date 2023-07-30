@@ -14,5 +14,12 @@ public class DrawingApplet extends Applet implements ActionListener, MouseListen
     private int startX, startY, endX, endY, lineWidth = 1;
     private boolean isDrawing = false;
     private boolean isErasing = false;   
+    public void init() 
+ {
+
+
+
+
+ }
 
 }
