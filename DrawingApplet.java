@@ -116,6 +116,11 @@ public class DrawingApplet extends Applet implements ActionListener, MouseListen
             eraseObject(x, y);
         }
     }
+	 public void mouseClicked(MouseEvent e) {}
+    public void mouseEntered(MouseEvent e) {}
+    public void mouseExited(MouseEvent e) {}
+    public void mouseMoved(MouseEvent e) {}
+
 
 	
  private void drawRectangle() {
