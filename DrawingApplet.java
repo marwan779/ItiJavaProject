@@ -155,6 +155,15 @@ public class DrawingApplet extends Applet implements ActionListener, MouseListen
         g.drawLine(startX, startY, endX, endY);
     }
  private void fillShape() {
+	  Graphics g = getGraphics();
+        g.setColor(currentColor);
+        if (currentShape.equals("rectangle")) {
+            int x = Math.min(startX, endX);
+            int y = Math.min(startY, endY);
+            int width = Math.abs(startX - endX);
+            int height = Math.abs(startY - endY);
+            g.fillRect(x, y, width, height);
+	}
  
  }
     
