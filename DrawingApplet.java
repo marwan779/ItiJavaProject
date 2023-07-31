@@ -1,4 +1,4 @@
-
+import javax.swing.JColorChooser;
 import java.applet.*;
 import java.awt.*;
 import java.awt.event.*;
@@ -6,6 +6,9 @@ import java.awt.event.*;
 public class DrawingApplet extends Applet implements ActionListener, MouseListener, MouseMotionListener  {
  private static final int CANVAS_WIDTH = 600;
     private static final int CANVAS_HEIGHT = 400;
+
+	Button button;
+	Color color = Color.black;
 
     private Panel topPanel;
     private Button rectButton, circleButton, ovalButton, lineButton, yellowButton, blueButton, greenButton, fillButton, eraseButton, increaseButton, decreaseButton,clearButton;
@@ -17,6 +20,11 @@ public class DrawingApplet extends Applet implements ActionListener, MouseListen
     public void init() 
  {       setSize(CANVAS_WIDTH, CANVAS_HEIGHT);
            //the buttons
+
+   button = new Button("Choose Color");    //color button dialog
+        button.addActionListener(this);  
+        add(button);
+  
         rectButton = new Button("Rectangle");
         circleButton = new Button("Circle");
         ovalButton = new Button("Oval");
@@ -69,6 +77,11 @@ public class DrawingApplet extends Applet implements ActionListener, MouseListen
 /*____________________________________________*/
 	 public void actionPerformed(ActionEvent e) 
 	{
+           if (e.getSource() == button) {                                       //to response for the chosen color from the dialog
+            currentColor = JColorChooser.showDialog(this, "Choose Color", currentColor);
+         }
+        
+		
          if (e.getSource() == rectButton) {
             currentShape = "rectangle";
          } 
@@ -230,6 +243,8 @@ public class DrawingApplet extends Applet implements ActionListener, MouseListen
 
 
 	
+public void paint(Graphics g) {      //for colorDialog
+	g.setColor(color); }
 
 
 private void eraseObject(int x, int y) {
